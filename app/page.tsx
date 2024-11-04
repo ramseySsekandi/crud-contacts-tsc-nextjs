@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import Contact from '@/components/Contact';
-import { Link, Plus } from 'lucide-react'
-
+import { Plus } from 'lucide-react'
+import Link from 'next/link'
 
 const page = () => {
   const contacts = [
@@ -52,7 +52,7 @@ const page = () => {
     <main className=' min-w-full'>
       <div className='p-8 grid grid-cols-12 min-h-screen'>
         <div className="col-span-3 border-r-2 flex justify-center">
-          <Button><span><Plus /></span><span>Create Contact</span></Button>
+          <Link href="../createNewContact"><Button><span><Plus /></span><span>Create Contact</span></Button></Link>
         </div>
         <div className="col-span-9 px-8 mt-4 ">
           <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
